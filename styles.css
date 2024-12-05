@@ -1,0 +1,107 @@
+:root {
+    /* Default/Light Colors */
+    --accent-color:  #2390cf;
+    --special-color: #eeb241;
+    --ceiling-color: #ffffff;
+    --high-color:    #fffeff;
+    --medium-color:  #e1e7ef;
+    --low-color:     #636262;
+    --floor-color:   #000000;
+
+    /* Default/Light Shadows */
+    --aside-shadow:       0.1em 0.1em 0.1em rgba(0,0,0,0.9);
+    --aside-glow:         0 0 0.1em var(--high-color);
+    --action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    --action-text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,1);
+    --action-box-glow:    0 0 0.2em var(--special-color);
+    --action-text-glow:   0 0 0.1em var(--high-color);
+
+    /* Dark Mode Colors */
+    --dark-accent-color:  #eeb241;
+    --dark-special-color: #2390cf;
+    --dark-ceiling-color: #ffffff;
+    --dark-high-color:    #333333;
+    --dark-medium-color:  #222222;
+    --dark-low-color:     #cccccc;
+    --dark-floor-color:   #000000;
+
+    /* Dark Mode Shadows */
+    --dark-aside-shadow:       0.05em 0.05em 0.2em rgba(0,0,0,0.3);
+    --dark-aside-glow:         0 0 0.1em var(--dark-high-color);
+    --dark-action-box-shadow:  0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    --dark-action-text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.5);
+    --dark-action-box-glow:    0 0 0.5em var(--dark-special-color);
+    --dark-action-text-glow:   0 0 0.2em var(--dark-high-color);
+
+    /* Flags changed in Media Queries */
+    --dark-mode: 0;
+    --mobile-view: 0;
+
+    /* Transitions */
+    --base-transition: none;
+    --fast-transition: none;
+    --base-enabled:    all 0.3s  ease-out;
+    --fast-enabled:    all 0.15s ease-out;
+
+    /* Browser Controls */
+    color-scheme: light;
+}
+
+*{
+    box-sizing: border-box;
+    cursor: default;
+}
+
+/* Base Elements */
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: stretch;
+    background-color: var(--medium-color);
+    color: var(--low-color);
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    justify-content: flex-start;
+    margin: 0;
+    min-height: 100vh;
+    text-shadow: 0.05em 0.05em 0.2em rgba(0,0,0,0.4);
+    transition: var(--base-transition);
+    padding: 0;
+}
+
+a, a *, button, button *{
+    cursor: pointer;
+    transition: var(--fast-transition);
+}
+
+a:link, a:visited{
+    color: var(--accent-color);
+    text-decoration: none;
+    text-shadow: 0.05em 0.05em 0.1em var(--floor-color);
+}
+
+a:hover, a:focus, a:active{
+    color: var(--special-color);
+    text-decoration: underline;
+}
+
+button{
+    cursor: pointer;
+}
+
+svg{
+    filter: drop-shadow(0.1em 0.1em 0.1em rgba(0,0,0,0.5));
+    height: 1.5em;
+    width: 1.5em;
+    transition: var(--fast-transition);
+}
+
+svg path{
+    fill: var(--accent-color);
+    transition: var(--base-transition);
+}
