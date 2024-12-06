@@ -317,3 +317,93 @@ header form input{
 header form *:focus{
     outline: 1px dashed var(--special-color);
 }
+
+/* Controls */
+
+header #controls{
+    margin: 1em 1em 1em 0;
+}
+
+header #controls a, header #controls a:link, header #controls a:visited, header #controls a:hover, header #controls a:focus, header #controls a:active {
+    text-decoration: none;
+}
+
+header #controls a svg{
+    height: 2.2em;
+    margin-left: 1em;
+    width: 2.2em;
+}
+
+header #controls a.off, header #controls a.off * {
+    cursor: default;
+}
+
+header #controls a.off:hover svg, header #controls a.off:focus svg, header #controls a.off:active svg{
+    transform: none;
+}
+
+header #controls a.off svg{
+    filter: drop-shadow(0.1em 0.1em 0.1em rgba(0,0,0,0.5)) !important;
+}
+
+header #controls a.off svg path{
+    fill: var(--accent-color) !important;
+}
+
+/* Header Title */
+
+header #welcome{
+    flex: 1;
+    margin: 1em 0 0 1em;
+}
+
+header #welcome h2{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0.07em 0.07em 0.1em rgba(0,0,0,0.5);
+    transition: var(--base-transition);
+    white-space: nowrap;
+}
+
+header #welcome h2 img {
+    filter: drop-shadow(0.1em 0.1em 0.05em rgba(0,0,0,0.5));
+    margin-right: 0.1em;
+    height: 1em;
+    vertical-align: top;
+    width: auto;
+}
+
+/* Actions */
+
+header #actions{
+    margin: 0 1em 0 0;
+}
+
+header #actions a, header #actions a:link, header #actions a:visited{
+    background-color: var(--accent-color);
+    border-radius: 1.5em;
+    box-shadow: var(--action-box-shadow);
+    color: var(--high-color);
+    display: inline-block;
+    margin: 0;
+    padding: 0.3em 0.8em;
+    text-decoration: none;
+    text-shadow: var(--action-text-shadow);
+}
+
+header #actions a:hover,
+header #actions a:focus,
+header #actions a:active {
+    background-color: var(--special-color);
+    box-shadow: var(--action-box-glow);
+    text-shadow: var(--action-text-glow);
+}
+
+/* Section */
+
+section{
+    display: flex;
+    flex: 1;
+    padding: 1em 2em;
+}
